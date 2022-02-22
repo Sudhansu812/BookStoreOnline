@@ -13,11 +13,12 @@ namespace BookSharingOnlineApi.Services
         public string Encrypt(string input)
         {
             byte[] initVector = UTF8Encoding.UTF8.GetBytes(input);
-            TripleDESCryptoServiceProvider cryptoServiceProvider = new TripleDESCryptoServiceProvider();
-
-            cryptoServiceProvider.Key = UTF8Encoding.UTF8.GetBytes(encryptionKey);
-            cryptoServiceProvider.Mode = CipherMode.ECB;
-            cryptoServiceProvider.Padding = PaddingMode.PKCS7;
+            TripleDESCryptoServiceProvider cryptoServiceProvider = new TripleDESCryptoServiceProvider
+            {
+                Key = UTF8Encoding.UTF8.GetBytes(encryptionKey),
+                Mode = CipherMode.ECB,
+                Padding = PaddingMode.PKCS7
+            };
 
             ICryptoTransform cryptoTransform = cryptoServiceProvider.CreateEncryptor();
             byte[] resultArray = cryptoTransform.TransformFinalBlock(initVector, 0, initVector.Length);
@@ -29,11 +30,12 @@ namespace BookSharingOnlineApi.Services
         public string Decrypt(string input)
         {
             byte[] initVector = Convert.FromBase64String(input);
-            TripleDESCryptoServiceProvider cryptoServiceProvider = new TripleDESCryptoServiceProvider();
-
-            cryptoServiceProvider.Key = UTF8Encoding.UTF8.GetBytes(encryptionKey);
-            cryptoServiceProvider.Mode = CipherMode.ECB;
-            cryptoServiceProvider.Padding = PaddingMode.PKCS7;
+            TripleDESCryptoServiceProvider cryptoServiceProvider = new TripleDESCryptoServiceProvider
+            {
+                Key = UTF8Encoding.UTF8.GetBytes(encryptionKey),
+                Mode = CipherMode.ECB,
+                Padding = PaddingMode.PKCS7
+            };
 
             ICryptoTransform cTransform = cryptoServiceProvider.CreateDecryptor();
             byte[] resultArray = cTransform.TransformFinalBlock(initVector, 0, initVector.Length);
