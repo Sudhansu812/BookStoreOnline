@@ -1,0 +1,95 @@
+<div class="d-flex justify-content-between">
+    <h2>Upload Book</h2>
+    <button mat-button (click)="onClose()">
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+
+<div class="container">
+
+    <form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+
+        <!-- First Name -->
+        <div class="m-3 input-group">
+
+            <div class="input-group-prepend">
+                <span class="input-group-text">Book Title</span>
+            </div>
+
+            <input required minlength="2" type="text" class="form-control" name="bookTitle"
+                #bookTitle="ngModel" [(ngModel)]="service.formData.bookTitle">
+        </div>
+
+        <!-- Last Name -->
+        <div class="m-3 input-group">
+
+            <div class="input-group-prepend">
+                <span class="input-group-text">Author Name</span>
+            </div>
+
+            <input required minlength="2" type="text" class="form-control" name="bookAuthorName"
+                #bookAuthorName="ngModel" [(ngModel)]="service.formData.bookAuthorName">
+        </div>
+
+        <!-- Username -->
+        <div class="m-3 input-group">
+
+            <div class="input-group-prepend">
+                <span class="input-group-text">bookDescription</span>
+            </div>
+
+            <input required minlength="2" type="text" class="form-control" name="bookDescription"
+                #bookDescription="ngModel" [(ngModel)]="service.formData.bookDescription">
+        </div>
+
+        <!-- Username -->
+        <div class="m-3 input-group">
+
+            <div class="input-group-prepend">
+                <span class="input-group-text">category</span>
+            </div>
+
+            <input required minlength="2" type="text" class="form-control" name="category"
+                #category="ngModel" [(ngModel)]="service.formData.category">
+        </div>
+
+        <!-- Username -->
+        <div class="m-3 input-group">
+
+            <div class="input-group-prepend">
+                <span class="input-group-text">bookPrice</span>
+            </div>
+
+            <input required type="number" class="form-control" name="bookPrice"
+                #bookPrice="ngModel" [(ngModel)]="service.formData.bookPrice">
+        </div>
+
+        <!-- Username -->
+        <div class="m-3 input-group">
+
+            <div class="input-group-prepend">
+                <span class="input-group-text">bookQuantity</span>
+            </div>
+
+            <input required type="number" class="form-control" name="bookQuantity"
+                #bookQuantity="ngModel" [(ngModel)]="service.formData.bookQuantity">
+        </div>
+
+        <!-- Username -->
+        <div class="m-3 input-group">
+
+            <div class="input-group-prepend">
+                <span class="input-group-text">bookCoverPath</span>
+            </div>
+
+            <input required type="text" class="form-control" name="bookCoverPath"
+                #bookCoverPath="ngModel" [(ngModel)]="service.formData.bookCoverPath">
+        </div>
+
+        <button class="m-3" mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+            Upload
+        </button>
+
+    </form>
+
+</div>
