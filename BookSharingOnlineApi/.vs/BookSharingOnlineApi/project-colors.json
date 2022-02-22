@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a907c1b9-412e-495a-9ad4-4c893b4cbd13": {
+      "ProjectGuid": "a907c1b9-412e-495a-9ad4-4c893b4cbd13",
+      "DisplayName": "BookSharingOnlineApi",
+      "ColorIndex": 0
+    },
+    "99dc34f8-ab16-4e4b-8d08-a83385f417e0": {
+      "ProjectGuid": "99dc34f8-ab16-4e4b-8d08-a83385f417e0",
+      "DisplayName": "BookSharingOnlineApiTest",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

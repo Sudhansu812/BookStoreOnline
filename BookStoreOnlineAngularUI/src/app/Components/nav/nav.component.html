@@ -1,0 +1,47 @@
+<style>
+    .cred {
+      color: white;
+    }
+  
+    .navbar {
+      background: #3DB2FF;
+      color: white;
+    }
+  
+  </style>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a routerLink="home" class="navbar-brand">Book Store Online</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a routerLink="home" class="btn btn-outline-warning cred mr-4" title="Home"> Home </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="categories" class="btn btn-outline-warning cred mr-4" href="#" title="Bookstore">
+            Bookstore </a>
+        </li>
+        <li class="nav-item">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Search" #search aria-describedby="basic-addon2" size="150">
+            <div class="input-group-append">
+              <button class="btn btn-warning  mr-4" type="button" (click)="onSearch(search.value)">Search</button>
+            </div>
+          </div>
+        </li>
+        <li> 
+          <a class="btn btn-outline-warning cred mr-4" role="button" (click)="onLogIn()" title="LogIn" *ngIf="!logInStatus"> Log In </a>
+        </li>
+        <li>
+          <a class="btn btn-warning cred mr-4" role="button" (click)="onRegister()" title="Register" *ngIf="!logInStatus"> Register </a>
+        </li>
+        <li>
+          <a class="btn btn-warning cred mr-4" role="button" (click)="onLogout()" title="Register" *ngIf="logInStatus"> Log Out </a>
+        </li>
+      </ul>
+    </div>
+  </nav>

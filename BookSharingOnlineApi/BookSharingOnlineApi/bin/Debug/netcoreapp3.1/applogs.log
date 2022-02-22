@@ -1,0 +1,2 @@
+2021-09-27 07:54:42,366 [1] INFO BookSharingOnlineApi.Program - App Stated
+2021-09-27 07:56:39,811 [24] ERROR BookSharingOnlineApi.Services.TransactionManagementService - ERROR: NoSuchBookFoundExcpetion.wildcardbook does not exist. Method: Void MoveNext()
