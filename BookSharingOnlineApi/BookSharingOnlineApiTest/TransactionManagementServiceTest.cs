@@ -204,8 +204,10 @@ namespace BookSharingOnlineApiTest
                 BookRating = 4.5
             };
 
-            List<BookModel> bookList = new List<BookModel>();
-            bookList.Add(bookModel);
+            List<BookModel> bookList = new List<BookModel>
+            {
+                bookModel
+            };
 
             mockBook.Setup(book => book.GetAll()).ReturnsAsync(bookList);
             mockBook.Setup(c => c.GetByCategory("Fiction")).ReturnsAsync(bookList);
@@ -263,10 +265,14 @@ namespace BookSharingOnlineApiTest
                 BookRating = 4.5
             };
 
-            List<BookReadDto> bookReadDtos = new List<BookReadDto>();
-            bookReadDtos.Add(bookReadDto);
-            List<BookModel> bookList = new List<BookModel>();
-            bookList.Add(bookModel);
+            List<BookReadDto> bookReadDtos = new List<BookReadDto>
+            {
+                bookReadDto
+            };
+            List<BookModel> bookList = new List<BookModel>
+            {
+                bookModel
+            };
 
             mockBook.Setup(book => book.GetAll()).ReturnsAsync(bookList);
 
@@ -467,8 +473,10 @@ namespace BookSharingOnlineApiTest
                 UserId = 1
             };
 
-            List<CartModel> cartList = new List<CartModel>();
-            cartList.Add(cart);
+            List<CartModel> cartList = new List<CartModel>
+            {
+                cart
+            };
 
             mockCart.Setup(c => c.GetAll()).ReturnsAsync(cartList);
 
@@ -562,9 +570,10 @@ namespace BookSharingOnlineApiTest
                 UserId = 1
             };
 
-            List<CartModel> cartlist = new List<CartModel>();
-
-            cartlist.Add(cart);
+            List<CartModel> cartlist = new List<CartModel>
+            {
+                cart
+            };
 
             mockCart.Setup(c => c.GetForUser(1)).ReturnsAsync(cartlist);
             mockBook.Setup(c => c.GetBookTitle(2)).ReturnsAsync("Test Book");

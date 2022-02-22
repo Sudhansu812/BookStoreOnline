@@ -14,11 +14,11 @@ namespace BookSharingOnlineApi.Services
 {
     public class TransactionManagementService : ITransactionManagementService
     {
-        private IBookRepo _bookRepo;
-        private IOrderRepo _orderRepo;
-        private ICartRepo _cartRepo;
-        private IRatedBookRepo _ratedBookRepo;
-        private IMapper _mapper;
+        private readonly IBookRepo _bookRepo;
+        private readonly IOrderRepo _orderRepo;
+        private readonly ICartRepo _cartRepo;
+        private readonly IRatedBookRepo _ratedBookRepo;
+        private readonly IMapper _mapper;
 
         public TransactionManagementService(IBookRepo bookRepo, IOrderRepo orderRepo, ICartRepo cartRepo, IRatedBookRepo ratedBookRepo, IMapper mapper)
         {
@@ -141,7 +141,7 @@ namespace BookSharingOnlineApi.Services
 
         public async Task<BookReadDto> Search(string bookTitle)
         {
-            BookModel book = null;
+            BookModel book;
             try
             {
                 book = await _bookRepo.Search(bookTitle);
@@ -205,13 +205,15 @@ namespace BookSharingOnlineApi.Services
 
             for(int i=0;i<cartList.Count;i++)
             {
-                CartTableDto cart = new CartTableDto();
-                cart.CartId = cartList[i].CartId;
-                cart.BookCoverPath = await _bookRepo.GetBookCoverPath(cartList[i].BookId);
-                cart.BookTitle = await _bookRepo.GetBookTitle(cartList[i].BookId);
-                cart.BookQuantity = cartList[i].CartQuantity;
-                cart.BookPrice = cartList[i].BookPrice;
-                cart.BookSumTotal = cartList[i].CartSumTotal;
+                CartTableDto cart = new CartTableDto
+                {
+                    CartId = cartList[i].CartId,
+                    BookCoverPath = await _bookRepo.GetBookCoverPath(cartList[i].BookId),
+                    BookTitle = await _bookRepo.GetBookTitle(cartList[i].BookId),
+                    BookQuantity = cartList[i].CartQuantity,
+                    BookPrice = cartList[i].BookPrice,
+                    BookSumTotal = cartList[i].CartSumTotal
+                };
                 cartTableItems.Add(cart);
             }
 
@@ -223,10 +225,12 @@ namespace BookSharingOnlineApi.Services
             List<CartModel> cartList = (await _cartRepo.GetForUser(cart.UserId)).ToList();
             for(int i=0;i<cartList.Count;i++)
             {
-                OrderCreateDto order = new OrderCreateDto();
-                order.UserId = cartList[i].UserId;
-                order.BookId = cartList[i].BookId;
-                order.OrderQuantity = cartList[i].CartQuantity;
+                OrderCreateDto order = new OrderCreateDto
+                {
+                    UserId = cartList[i].UserId,
+                    BookId = cartList[i].BookId,
+                    OrderQuantity = cartList[i].CartQuantity
+                };
                 bool result = await Order(order);
                 if(result == false)
                 {
