@@ -9123,11 +9123,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BookStoreOnline\\BookSharingOnlineApi\\BookSharingOnlineApiTest\\BookSharingOnlineApiTest.csproj",
+      "projectUniqueName": "C:\\Users\\Sudhanshu\\Source\\Repos\\Sudhansu812\\BookStoreOnline\\BookSharingOnlineApi\\BookSharingOnlineApiTest\\BookSharingOnlineApiTest.csproj",
       "projectName": "BookSharingOnlineApiTest",
-      "projectPath": "D:\\BookStoreOnline\\BookSharingOnlineApi\\BookSharingOnlineApiTest\\BookSharingOnlineApiTest.csproj",
+      "projectPath": "C:\\Users\\Sudhanshu\\Source\\Repos\\Sudhansu812\\BookStoreOnline\\BookSharingOnlineApi\\BookSharingOnlineApiTest\\BookSharingOnlineApiTest.csproj",
       "packagesPath": "C:\\Users\\Sudhanshu\\.nuget\\packages\\",
-      "outputPath": "D:\\BookStoreOnline\\BookSharingOnlineApi\\BookSharingOnlineApiTest\\obj\\",
+      "outputPath": "C:\\Users\\Sudhanshu\\Source\\Repos\\Sudhansu812\\BookStoreOnline\\BookSharingOnlineApi\\BookSharingOnlineApiTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -9147,8 +9147,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\BookStoreOnline\\BookSharingOnlineApi\\BookSharingOnlineApi\\BookSharingOnlineApi.csproj": {
-              "projectPath": "D:\\BookStoreOnline\\BookSharingOnlineApi\\BookSharingOnlineApi\\BookSharingOnlineApi.csproj"
+            "C:\\Users\\Sudhanshu\\Source\\Repos\\Sudhansu812\\BookStoreOnline\\BookSharingOnlineApi\\BookSharingOnlineApi\\BookSharingOnlineApi.csproj": {
+              "projectPath": "C:\\Users\\Sudhanshu\\Source\\Repos\\Sudhansu812\\BookStoreOnline\\BookSharingOnlineApi\\BookSharingOnlineApi\\BookSharingOnlineApi.csproj"
             }
           }
         }

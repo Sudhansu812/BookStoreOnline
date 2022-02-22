@@ -108,7 +108,7 @@ namespace BookSharingOnlineApi.Controllers
         [HttpGet("orders/{id}")]
         public async Task<int> GetBookRemainingQuantity(int id)
         {
-            return await _service.GetBookReamainingQuantity(id);
+            return await _service.GetBookRemainingQuantity(id);
         }
     }
 }

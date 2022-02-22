@@ -167,7 +167,7 @@ namespace BookSharingOnlineApi.Services
             return true;
         }
 
-        public async Task<int> GetBookReamainingQuantity(int bookId)
+        public async Task<int> GetBookRemainingQuantity(int bookId)
         {
             BookModel book = await _bookRepo.GetBook(bookId);
             return (book.BookQuantity);

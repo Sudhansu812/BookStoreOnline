@@ -5982,11 +5982,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BookStoreOnline\\BookSharingOnlineApi\\BookSharingOnlineApi\\BookSharingOnlineApi.csproj",
+      "projectUniqueName": "C:\\Users\\Sudhanshu\\Source\\Repos\\Sudhansu812\\BookStoreOnline\\BookSharingOnlineApi\\BookSharingOnlineApi\\BookSharingOnlineApi.csproj",
       "projectName": "BookSharingOnlineApi",
-      "projectPath": "D:\\BookStoreOnline\\BookSharingOnlineApi\\BookSharingOnlineApi\\BookSharingOnlineApi.csproj",
+      "projectPath": "C:\\Users\\Sudhanshu\\Source\\Repos\\Sudhansu812\\BookStoreOnline\\BookSharingOnlineApi\\BookSharingOnlineApi\\BookSharingOnlineApi.csproj",
       "packagesPath": "C:\\Users\\Sudhanshu\\.nuget\\packages\\",
-      "outputPath": "D:\\BookStoreOnline\\BookSharingOnlineApi\\BookSharingOnlineApi\\obj\\",
+      "outputPath": "C:\\Users\\Sudhanshu\\Source\\Repos\\Sudhansu812\\BookStoreOnline\\BookSharingOnlineApi\\BookSharingOnlineApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

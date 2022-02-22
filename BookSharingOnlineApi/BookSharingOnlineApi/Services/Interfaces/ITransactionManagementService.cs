@@ -24,7 +24,7 @@ namespace BookSharingOnlineApi.Services.Interfaces
 
         Task<bool> SearchRatedBook(int userId, int bookId);
 
-        Task<int> GetBookReamainingQuantity(int bookId);
+        Task<int> GetBookRemainingQuantity(int bookId);
 
         Task<IEnumerable<CartReadDto>> GetCartList(int id);
 

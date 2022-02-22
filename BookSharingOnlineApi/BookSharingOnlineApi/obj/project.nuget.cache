@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cVgW1kvm6SuMyL5o4mZ22L84cmY6IUEk3BXKiX1Zl65pEUPlX9iBRuEHQOpUCV18AZegmObP0qv1yu5FwXDAzg==",
+  "dgSpecHash": "QysRXnMHruUWeW0uNoJE1w4c+XvxahuHWS/kzLRKmL619ksOBYktAH2QKWXLP7SqOd+AomWa8LLRgHF1txTjPA==",
   "success": true,
-  "projectFilePath": "D:\\BookStoreOnline\\BookSharingOnlineApi\\BookSharingOnlineApi\\BookSharingOnlineApi.csproj",
+  "projectFilePath": "C:\\Users\\Sudhanshu\\Source\\Repos\\Sudhansu812\\BookStoreOnline\\BookSharingOnlineApi\\BookSharingOnlineApi\\BookSharingOnlineApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sudhanshu\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Sudhanshu\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
